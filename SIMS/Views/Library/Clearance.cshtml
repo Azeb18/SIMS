@@ -1,0 +1,117 @@
+﻿@model SIMS.Models.LibraryClearanceDetailsViewModel
+@{
+    ViewBag.Title = "Clearance";
+}
+
+<h2>Library Clearance Details</h2>
+<h4>Library clearance request details</h4>
+<hr />
+
+@Html.Partial("_Alerts")
+<div class="row">
+    <div class="col-sm-6">
+        @* Student Information *@
+        <h4>Student Information</h4>
+        <br />
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="~/Content/avatar.png" alt="" class="img img-responsive" style="width: 150px; height: 150px" />
+            </div>
+            <div class="col-sm-8">
+                <dl class="">
+                    <dt>Name</dt>
+                    <dd>@Model.LibraryClearance.Clearance.Student.FirstName @Model.LibraryClearance.Clearance.Student.MiddleName @Model.LibraryClearance.Clearance.Student.LastName</dd>
+
+                    <dt>Program</dt>
+                    <dd>@Model.LibraryClearance.Clearance.Student.Program.Name</dd>
+
+                    <dt>Level</dt>
+                    <dd>@Model.LibraryClearance.Clearance.Student.Level.Name</dd>
+
+                    <dt>Id Number</dt>
+                    <dd>@Model.LibraryClearance.Clearance.Student.IdNumber</dd>
+                </dl>
+            </div>
+        </div>
+
+        <hr />
+
+        @* Clearance Information *@
+        <h4>Clearance Request Details</h4>
+        <br />
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Reason</th>
+                    <th>Remark</th>
+                    <th>Request Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.LibraryClearance.Clearance.Reason.Reason</td>
+                    <td>@Model.LibraryClearance.Clearance.Remark</td>
+                    <td>@Model.LibraryClearance.Clearance.RequestDate</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-sm-6">
+        @* Book Loans *@
+        <h4>Book Loans</h4>
+        
+        @if (@Model.BookLoans.Count() == 0)
+        {
+            <br />
+            <div class="alert alert-success">
+                <p>There are no book loans associated with this student.</p>
+            </div>
+        }
+        else
+        {
+            <table class="table table-striped table-bordered">
+                <caption>The student has @Model.BookLoans.Count() loans.</caption>
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Librarian Id</th>
+                        <th>Loan Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var loan in @Model.BookLoans)
+                    {
+                        <tr>
+                            <td>@loan.Book.Title</td>
+                            <td>@loan.Librarian.IdNumber</td>
+                            <td>@loan.LoanDate</td>
+                        </tr>
+                    }
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        }
+
+        <div class="well">
+            <h4>Actions</h4>
+            <p>You can either clear the student or deny the clearance request. Your account will be associated with this decision.</p>
+            @using (Html.BeginForm("DenyClearance", "Library", new { id = @Model.LibraryClearance.LibraryClearanceId}, FormMethod.Post, new { @class = "pull-left", style = "margin-right: 10px" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <button class="btn btn-danger">Deny Clearance</button>
+                </div>
+            }            
+            @using (Html.BeginForm("ClearStudent", "Library",new { id = @Model.LibraryClearance.LibraryClearanceId}, FormMethod.Post, new { @class = "" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <button class="btn btn-success">Clear Student</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿@model SIMS.Models.UploadedFilesViewModel
+@{
+    ViewBag.Title = "UploadedFiles";
+}
+
+<div class="row">
+    <div class="col-sm-10">
+        <h2>Uploaded Files</h2>
+        <h4>Files you have uploaded</h4>
+    </div>
+    <div class="col-sm-2">
+        <br /><br />
+        @Html.ActionLink("Upload another file", "upload", null, new { @class = "btn btn-success" })
+    </div>
+</div>
+
+
+<hr />
+
+@Html.Partial("_Alerts")
+
+@if(Model.StudentFiles == null)
+{
+    <div class="alert alert-warning">
+        <p>You have no uploaded files.</p>
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Uploaded on</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var studentFile in Model.StudentFiles)
+            {
+                <tr>
+                    <td>@studentFile.Description</td>
+                    <td>@studentFile.UploadedOn.ToString("MMM dd yyyy , HH:MM")</td>
+                    <td>
+                        <a href="~/UploadedFiles/@studentFile.File" class="btn btn-default pull-left">Download</a>
+                        @using(Html.BeginForm("Delete", "File", FormMethod.Post))
+                        {
+                            <input type="hidden" name="StudentFileId" value="@studentFile.StudentFileId" />
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+}

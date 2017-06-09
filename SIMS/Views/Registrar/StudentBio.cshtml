@@ -1,0 +1,341 @@
+﻿@model SIMS.Models.StudentBioViewModel
+@{
+    ViewBag.Title = "Student Profile";
+}
+
+<div class="visible-print">
+    <h2>Student Report</h2>
+</div>
+<div class="hidden-print">
+    <h2>Student Profile</h2>
+    <h4>Details about a student</h4>
+</div>
+
+<hr />
+
+@Html.Partial("_Alerts")
+
+@* Filter form *@
+<div class="row hidden-print">
+    <div class="col-sm-12">
+        @using (Html.BeginForm("StudentBio", "Registrar", FormMethod.Post, new {@class="hidden-print" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-sm-8">
+                    @Html.LabelFor(m => m.StudentIdNumber)
+                    @Html.EditorFor(m => m.StudentIdNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(m => m.StudentIdNumber, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-sm-4">
+                    <br />                  
+                    <button class="btn btn-success"><span class="glyphicon glyphicon-search"></span> View Student Profile</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@Html.ValidationSummary(true,null,new {@class = "text-danger"})
+
+@* Student Details *@
+@if(Model.Student == null)
+{
+    <div class="well">
+        <p>Enter the student's ID number.</p>
+    </div>
+}
+else
+{
+    <br />
+    <div class="row">
+        <div class="col-sm-6">
+            
+            @* Student Profile *@
+            <div class="row">
+                <div class="col-sm-4 col-xs-4">
+                    <img src="~/Content/avatar.png" alt="" class="img img-responsive" style="width: 150px; height: 150px" />
+                </div>
+                <div class="col-sm-8 col-xs-8">
+                    <dl class="">
+                        <dt>Name</dt>
+                        <dd>@Model.Student.FirstName @Model.Student.MiddleName @Model.Student.LastName</dd>
+
+                        <dt>Program</dt>
+                        <dd>@Model.Student.Program.Name</dd>
+
+                        <dt>Level</dt>
+                        <dd>@Model.Student.Level.Name</dd>
+
+                        <dt>Id Number</dt>
+                        <dd>@Model.Student.IdNumber</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <br />
+            <h4>Clearances</h4>
+            @* Clearances *@
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped table-bordered">
+                        <caption>Clearance Summary</caption>
+                        <thead>
+                            <tr>
+                                <th>Clearance Reason</th>
+                                <th>Remark</th>
+                                <th>Request Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var request in Model.Clearances)
+                            {
+                                <tr>
+                                    <td>@request.Reason.Reason</td>
+                                    <td>@request.Remark</td>
+                                    <td>@request.RequestDate</td>
+                                    <td>
+                                        @if (request.Cleared == null)
+                                        {
+                                            <span>Pending</span>
+                                        }
+                                        else if (request.Cleared == true)
+                                        {
+                                            <span>Clearance Granted</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Clearance Denied</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4>Current Courses</h4>
+            @* Courses *@
+            <table class="table table-striped table-bordered">
+                <caption>Currently registered courses</caption>
+                <thead>
+                    <tr>
+                        <th>Course Number</th>
+                        <th>Course Title</th>
+                        <th>Credit Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var course in Model.CurrentCourses)
+                    {
+                        <tr>
+                            <td>@course.Course.CourseNumber</td>
+                            <td>@course.Course.Title</td>
+                            <td>@course.Course.CreditHours</td>
+                        </tr>
+                    }
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+    <div class="row">
+        @* Grade Report *@
+        <div class="col-sm-6">
+            <h4>Grade Report</h4>
+            @if (Model.Grades.Count().Equals(0))
+            {
+                <div class="alert alert-warning">
+                    <p>There are no grades to show.</p>
+                </div>
+            }
+            else
+            {
+                foreach (var yearresult in Model.Grades.GroupBy(m => m.Course.Year))
+                {
+                    <h3>Year @yearresult.FirstOrDefault().Course.Year</h3>
+                    <br />
+                    foreach (var semesterresult in yearresult.GroupBy(m => m.Course.Semester))
+                    {
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#semester-@semesterresult.FirstOrDefault().Course.Year-@semesterresult.FirstOrDefault().Course.Semester">
+                                        Semester @semesterresult.FirstOrDefault().Course.Semester
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="semester-@semesterresult.FirstOrDefault().Course.Year-@semesterresult.FirstOrDefault().Course.Semester" class="panel-collapse collapse">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Course Title</th>
+                                            <th>Course Code</th>
+                                            <th>Credit Hours</th>
+                                            <th>Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var result in semesterresult)
+                                        {
+                                            <tr>
+                                                <td>@result.Course.Title</td>
+                                                <td>@result.Course.CourseNumber</td>
+                                                <td>@result.Course.CreditHours</td>
+                                                <td>
+                                                    @if (@result.Grade != null)
+                                                    {
+                                                        @result.Grade.Name
+                                                    }
+                                                    else
+                                                    {
+                                                        <span> Not Specified</span>
+                                                    }
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    }
+                }
+
+            }
+
+        </div>
+        @* loans *@
+        <div class="col-sm-6">
+            <h4>Loans</h4>
+            <hr />
+            @Html.Partial("_Alerts")
+
+            @if (Model.Loans.Count().Equals(0))
+            {
+                <div class="alert alert-warning">
+                    <p>There are no loans</p>
+                </div>
+            }
+            else
+            {
+                <div class="row">
+                    <form>
+                        <div class="form-group col-sm-3">
+                            <label>Student Id</label>
+                            <input type="text" value="" class="form-control" placeholder="Any" />
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label>Librarian Id</label>
+                            <input type="text" value="" class="form-control" placeholder="Any" />
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label>Loan Status</label>
+                            <select class="form-control">
+                                <option>Any</option>
+                                <option>Returned</option>
+                                <option>Not Returned</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <table class="table table-striped table-hover">
+                    <caption> Matching Items.</caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                Book Id
+                            </th>
+                            <th>
+                                Student Id
+                            </th>
+                            <th>
+                                Linrarian Id
+                            </th>
+                            <th>
+                                Loan Date
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Loans)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BookId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.IdNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Librarian.IdNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LoanDate)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Details", "Loan", new { id = item.LoanId })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @* Pagination *@
+                @*<nav>
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>*@
+            }
+        </div>
+    </div>
+    <hr />
+
+    @* Actions *@
+    <div class="row">
+        <div class="col-sm-12 text-right">
+            <ul class="list-unstyled list-inline">
+                @*<li>
+                @using(Html.BeginForm())
+                {
+                    <div class="form-group">
+                        <button class="btn btn-default">View Grade Report</button>
+                    </div>
+                }
+            </li>*@
+                <li>
+                    @using (Html.BeginForm("ResetStudentPassword", "Registrar", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="@Html.NameFor(m=>m.StudentIdNumber)" value="@Model.StudentIdNumber" />
+                        <div class="form-group">                            
+                            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-repeat"></span> Reset Password</button>
+                        </div>
+                    }
+                </li>
+                <li>                    
+                    <button class="btn btn-default" onclick="$('.collapse').collapse('show'); window.print()"><span class="glyphicon glyphicon-print"></span> Print Report</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+}

@@ -1,0 +1,53 @@
+﻿@model SIMS.Models.MakeLoanViewModel
+
+@{
+    ViewBag.Title = "Make a Loan";
+}
+
+<h2>Make a Loan</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+        <h4>Make a new loan</h4>
+        <hr />
+    
+        if(TempData.ContainsKey("BookId"))
+        {
+            <div class="alert alert-success">
+                <b>Success! Book with Id @TempData["BookId"] has been lent to student with Id @TempData["StudentId"] .</b>
+            </div>            
+        }
+    
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    
+        <div class="row">
+            <div class="form-group col-sm-4">
+                @Html.LabelFor(model => model.BookId)
+                @Html.EditorFor(model => model.BookId, new { htmlAttributes = new { @class = "form-control" , min=1 } })
+                @Html.ValidationMessageFor(model => model.BookId, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-sm-4">
+                @Html.LabelFor(model => model.StudentIdNumber)
+                @Html.EditorFor(model => model.StudentIdNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StudentIdNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <button class="btn btn-default" type="reset">Reset</button>
+            <button class="btn btn-success" type="submit">Make Loan</button>
+        </div>
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Loans")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

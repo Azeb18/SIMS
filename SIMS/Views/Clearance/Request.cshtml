@@ -1,0 +1,231 @@
+﻿@model SIMS.Models.RequestClearanceViewModel
+@using SIMS.Models;
+@{
+    ViewBag.Title = "Request";
+    Clearance latestPendingClearance = null;
+    LibraryClearance libraryClearance = null;
+    RegistrarClearance registrarClearance = null;
+    AcademicDeanClearance academicDeanClearance = null;
+    PropertyClearance propertyClearance = null;
+
+
+    latestPendingClearance = Model.PreviousClearances.OrderByDescending(m => m.RequestDate).FirstOrDefault();
+    if(latestPendingClearance != null)
+    {
+        ApplicationDbContext context = new ApplicationDbContext();
+
+        int id = latestPendingClearance.ClearanceId;
+         libraryClearance = context.LibraryClearances.Include("Librarian").SingleOrDefault(m => m.ClearanceId == id);
+         propertyClearance = context.PropertyClearances.Include("Property").SingleOrDefault(m => m.ClearanceId == id);
+         academicDeanClearance = context.AcademicDeanClearances.Include("AcademicDean").SingleOrDefault(m => m.ClearanceId == id);
+         registrarClearance = context.RegistrarClearances.Include("Registrar").SingleOrDefault(m => m.ClearanceId == id);
+    }
+}
+
+<h2>Request Clearance</h2>
+<h4>Specify your reason and request clearance.</h4>
+<hr />
+@Html.Partial("_Alerts")
+
+@if(latestPendingClearance==null || latestPendingClearance.Cleared == false)
+{
+    <div class="well">
+        You have not been granted clearance within the past 15 days.
+    </div>
+}
+
+
+@if(Model.PreviousClearances != null && Model.PreviousClearances.Count().Equals(0))
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ClearanceReasonId)
+                    <select class="form-control" name="@Html.NameFor(m=>m.ClearanceReasonId)">
+                        @foreach (var reason in Model.Reasons)
+                            {
+                            <option value=@reason.ClearanceReasonId>@reason.Reason</option>
+                            }
+                    </select>
+                    @Html.ValidationMessageFor(model => model.ClearanceReasonId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Remark)
+                    @Html.TextAreaFor(model => model.Remark, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-success" type="submit">Request Clearance</button>
+                </div>
+            </div>
+        </div>
+    }
+
+}
+else
+{
+    if(Model.PreviousClearances.Any(m=>m.Cleared == true))
+    {
+        <div class="alert alert-info">
+            <p>You have already been granted clearance within the past 15 days.</p>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            <p>You have already requested clearance within the past 15 days.</p>
+        </div>
+    }
+
+    @* Clearance Details *@
+    <div class="row">
+        <div class="col-sm-8">
+            <table class="table table-striped table-bordered">
+                <caption>Clearance Summary</caption>
+                <thead>
+                    <tr>
+                        <th>Clearance Reason</th>
+                        <th>Remark</th>
+                        <th>Request Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var request in Model.PreviousClearances)
+                    {
+                        <tr>
+                            <td>@request.Reason.Reason</td>
+                            <td>@request.Remark</td>
+                            <td>@request.RequestDate</td>
+                            <td>
+                                @if (request.Cleared == null)
+                                {
+                                    <span>Pending</span>
+                                }
+                                else if (request.Cleared == true)
+                                {
+                                    <span>Clearance Granted</span>
+                                }
+                                else
+                                {
+                                    <span>Clearance Denied</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+
+    @* Clearance Status *@
+    if (latestPendingClearance != null)
+    {
+        <div class="row">
+            <div class="col-sm-6">
+                @* Clearance Status *@
+                <h4>Clearance Status</h4>
+                <br />
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @* Library Clearance *@
+                        <tr>
+                            <td>Library</td>
+                            @if (libraryClearance == null)
+                            {
+                            <td>Not Requested<br /> (The coordinator has not signed)</td>
+
+                            }
+                            else
+                            {
+                            <td>@libraryClearance.Status</td>
+                            }
+                        </tr>
+
+                        @* Property Clearance *@
+                        <tr>
+                            <td>Property and Store</td>
+                            @if (propertyClearance == null)
+                            {
+                            <td>Not Requested</td>
+                            }
+                            else
+                            {
+                            <td>@propertyClearance.Status</td>
+                            }
+                        </tr>
+
+                        @* Academic Dean Clearance *@
+                        <tr>
+                            <td>Academic Dean </td>
+                            @if (academicDeanClearance == null)
+                            {
+                            <td>Not Requested</td>
+                            }
+                            else
+                            {
+                            <td>@academicDeanClearance.Status</td>
+                            }
+                        </tr>
+
+                        @* Registrar Clearance *@
+                        <tr>
+                            <td>Registrar </td>
+                            @if (registrarClearance == null)
+                            {
+                            <td>Not Requested</td>
+                            }
+                            else
+                            {
+                            <td>@registrarClearance.Status</td>
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            @if (latestPendingClearance.Cleared == null)
+            {
+                <div class="col-sm-6">
+                    @* Clearance Actions *@
+                    <div class="well">
+                        <h4>Clearance Actions</h4>
+                        Your clearance request is being processed.
+                        <br /><br />
+                        @using(Html.BeginForm("DeleteRequest","Clearance",FormMethod.Post))
+                    {
+                            <input type="hidden" name="id" value=@latestPendingClearance.ClearanceId />
+                            <div class="form-group">
+                                <button class="btn btn-danger">
+                                    Delete Clearance Request
+                                </button>
+                            </div>
+                    }
+                    </div>
+                </div>
+            }
+            
+        </div>
+            }
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

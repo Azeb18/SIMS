@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("SIMS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Student"))
+                {
+                    @* Student Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Dashboard", "StudentDashboard", "Home")</li>
+                        <li>@Html.ActionLink("Grade Report", "GradeReport", "Result")</li>
+                        @*<li>@Html.ActionLink("Registeration", "Register", "Course")</li>*@
+                        @if (User.IsInRole("RegularStudent"))
+                        {
+                            <li>@Html.ActionLink("Clearance", "Request", "Clearance")</li>
+                        }
+                        <li>@Html.ActionLink("Borrowed Books", "Borrowed", "Library")</li>
+                        @*<li>@Html.ActionLink("Add/Drop Course", "AddDrop", "Course")</li>*@
+                        <li>@Html.ActionLink("Curriculum", "Index", "Curriculum")</li>
+                        <li>@Html.ActionLink("Uploaded Files", "UploadedFiles", "File")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registeration <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Course Registeration", "Register", "Course")</li>
+                                <li>@Html.ActionLink("Add/Drop Course", "AddDrop", "Course")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("Librarian"))
+                {
+                    @* Librarian Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("List of Loans", "Loans", "Library")</li>
+                        <li>@Html.ActionLink("Make a Loan", "MakeLoan", "Library")</li>
+                        <li>@Html.ActionLink("Clearance Requests", "Clearances", "Library")</li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("Coordinator"))
+                {
+                    @* Coordinator Links *@
+                    <ul class="nav navbar-nav">
+                        @if (User.IsInRole("DaytimeCoordinator"))
+                        {
+                            <li>@Html.ActionLink("Clearance Requests", "Requests", "Clearance")</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Section Placement", "Requests", "Clearance")</li>
+                        }
+                        <li>@Html.ActionLink("Curriculum", "Index", "Curriculum")</li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("AcademicDean"))
+                {
+                    @* Academic Dean Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Clearance Requests", "Clearances", "AcademicDean")</li>
+                        <li>@Html.ActionLink("Manage Teachers", "Teachers", "Course")</li>
+                        <li>@Html.ActionLink("Curriculum", "Index", "Curriculum")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hire Staff <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Hire Teacher", "RegisterTeacher", "Account")</li>
+                                <li>@Html.ActionLink("Hire Librarian", "RegisterLibrarian", "Account")</li>
+                                <li>@Html.ActionLink("Hire Coordinator", "RegisterCoordinator", "Account")</li>
+                                <li>@Html.ActionLink("Hire Registrar", "RegisterRegistrar", "Account")</li>
+                                <li>@Html.ActionLink("Hire Property and Store", "RegisterProperty", "Account")</li>
+                                <li>@Html.ActionLink("Hire Secuity", "RegisterSecurity", "Account")</li>
+                                <li>@Html.ActionLink("Hire Cafe", "RegisterCafe", "Account")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("Registrar"))
+                {
+                    @* Registrar Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Register Student", "RegisterStudent", "Account")</li>
+                        <li>@Html.ActionLink("Clearance Requests", "Clearances", "Registrar")</li>
+                        <li>@Html.ActionLink("Student Profile", "StudentBio", "Registrar")</li>
+                        <li>@Html.ActionLink("Curriculum", "Index", "Curriculum")</li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("Property"))
+                {
+                    @* Property Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Clearance Requests", "Clearances", "Property")</li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("Teacher"))
+                {
+                    @* Teacher Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Students List", "Students", "Course")</li>
+                        <li>@Html.ActionLink("Curriculum", "Index", "Curriculum")</li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("Security"))
+                {
+                    @* Security Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Student Identification", "Students", "Course")</li>
+                    </ul>
+                }
+                else if (User.Identity.IsAuthenticated && User.IsInRole("Cafe"))
+                {
+                    @* Cafe Links *@
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Student Identification", "Students", "Course")</li>
+                    </ul>
+                }
+
+
+                @Html.Partial("_LoginPartial")
+            </div>
+
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/App/app.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+
+
+</html>

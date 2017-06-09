@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SIMS.Models.LibraryClearance>
+@{
+    ViewBag.Title = "Library";
+}
+
+<h2>Library Clearance Requests</h2>
+<h4>Clearance requests sent to the library</h4>
+<hr />
+@Html.Partial("_Alerts")
+
+<div class="row">
+    <div class="col-sm-12">
+        @if (Model.Count().Equals(0))
+        {
+            <div class="alert alert-warning">
+                <p>There are no library clearance requests.</p>
+            </div>
+        }
+        else
+        {
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Student Id</th>
+                    <th>Clearance Reason</th>
+                    <th>Remark</th>
+                    <th>Request Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var libraryClearace in Model)
+                {
+                    <tr>
+                        <td>@libraryClearace.Clearance.Student.IdNumber</td>
+                        <td>@libraryClearace.Clearance.Reason.Reason</td>
+                        <td>@libraryClearace.Clearance.Remark</td>
+                        <td>@libraryClearace.Clearance.RequestDate</td>
+                        <td>@Html.ActionLink("Show Details", "Clearance", new { id = libraryClearace.LibraryClearanceId })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        }
+
+    </div>
+</div>

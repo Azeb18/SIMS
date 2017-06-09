@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNet.Identity
+@using SIMS.Models
+@using Microsoft.AspNet.Identity.Owin;
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <img src="~/Content/avatar.png" class="img img-circle" style="height: 32px; width:32px;margin-top: 8px " alt="" />
+        </li>
+        <li>
+            @{
+        ApplicationUser user = Context.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(User.Identity.GetUserId());
+            }
+            
+            @Html.ActionLink(user.FirstName + " " + user.MiddleName, "Index", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        @*<li>@Html.ActionLink("Upload File", "Upload", "File", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>*@
+        <li><a href="#">Visit HTTC Official Website</a></li>
+
+    </ul>
+}

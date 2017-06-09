@@ -1,0 +1,98 @@
+﻿@model SIMS.Models.AddDropCourseViewModel
+@{
+    ViewBag.Title = "AddDrop";
+    int semester = DateTime.Now.Month < 7 ? 1 : 2;
+}
+
+<h2>Add or Drop Courses</h2>
+<h4>Select courses to take in the next semester</h4>
+<hr />
+
+@Html.Partial("_Alerts")
+
+@* Available Courses *@
+@if(Model.AvailableCourses.Count().Equals(0))
+{
+    <div class="alert alert-warning">
+        <p>There are no available courses to add.</p>
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+        <caption>Available courses</caption>
+        <thead>
+            <tr>
+                <th>Course Number</th>
+                <th>Course Title</th>
+                <th>Credit Hours</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model.AvailableCourses)
+            {
+                <tr>
+                    <td>@course.Course.CourseNumber</td>
+                    <td>@course.Course.Title</td>
+                    <td>@course.Course.CreditHours</td>
+                    <td>
+                        @if (@course.Grade != null)
+                        {
+                            @course.Grade.Name
+                        }
+                    </td>
+                    <td>
+                        @using (Html.BeginForm("Add", "Course", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="CourseId" value="@course.CourseId" />
+                            <button class="btn btn-success" type="submit">Add</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@* Current Courses *@
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-striped table-bordered">
+            <caption>Currently registered courses</caption>
+            <thead>
+                <tr>
+                    <th>Course Number</th>
+                    <th>Course Title</th>
+                    <th>Credit Hours</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var course in Model.CurrentCourses)
+                {
+                    <tr>
+                        <td>@course.Course.CourseNumber</td>
+                        <td>@course.Course.Title</td>
+                        <td>@course.Course.CreditHours</td>
+                        <td>
+                            @if(course.Course.Year != course.Student.Year || course.Semester != semester)
+                            {
+                                using(Html.BeginForm("Drop","Course",FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="StudentCourseId" value="@course.StudentCourseId" />
+                                    <button class="btn btn-default" type="submit">Drop</button>
+                                }                                
+                            }
+                        </td>
+                    </tr>
+                }
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+</div>

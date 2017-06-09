@@ -1,0 +1,28 @@
+﻿@if (TempData.ContainsKey("SuccessMessage"))
+{
+    <div class="alert alert-success alert-dismissable text-center">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        @TempData["SuccessMessage"]
+    </div>
+}
+else if (TempData.ContainsKey("ErrorMessage"))
+{
+    <div class="alert alert-danger  alert-dismissable text-center">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        @TempData["ErrorMessage"]
+    </div>
+}
+else if (TempData.ContainsKey("InfoMessage"))
+{
+    <div class="alert alert-info  alert-dismissable text-center">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        @TempData["InfoMessage"]
+    </div>
+}
+else if (TempData.ContainsKey("WarningMessage"))
+{
+    <div class="alert alert-warning  alert-dismissable text-center">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        @TempData["WarningMessage"]
+    </div>
+}

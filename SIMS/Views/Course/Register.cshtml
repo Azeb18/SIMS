@@ -1,0 +1,79 @@
+﻿@model SIMS.Models.RegisterCourseViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Course Registeration</h2>
+<h4>Select courses you want to take</h4>
+<hr />
+
+@if(@Model.Courses.Count().Equals(0))
+{
+    <div class="alert alert-warning">
+        <p><b>Sorry! </b> There are no courses available to you at this time.</p>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    @* Summary *@
+                    <table class="table table-bordered  table-condensed">
+                        <caption>Summary</caption>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Semester</th>
+                                <th>Program</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Model.Courses.First().Year</td>
+                                <td>@Model.Courses.First().Semester</td>
+                                <td>@Model.Courses.First().Program.Name</td>
+                                <td>@Model.Courses.First().Level.Name</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <table class="table table-striped table-bordered">
+                    <caption>Available courses</caption>
+                    <thead>
+                        <tr>
+                            <th>Selection</th>
+                            <th>Course Title</th>
+                            <th>Course Code</th>
+                            <th>Credit Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var course in Model.Courses)
+                        {
+                            <tr>
+                                <td><input type="checkbox" name="@Html.NameFor(m=>m.SelectedCourses)" value=@course.CourseId /></td>
+                                <td>@course.Title</td>
+                                <td>@course.CourseNumber</td>
+                                <td>@course.CreditHours</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <p>Total Credit Hours: @Model.Courses.Sum(m=>m.CreditHours)</p>
+                <div class="form-group">
+                    <button class="btn btn-success" type="submit">Register Courses</button>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+

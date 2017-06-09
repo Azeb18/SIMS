@@ -1,0 +1,73 @@
+﻿@model IEnumerable<SIMS.Models.StudentCourse>
+@{
+    ViewBag.Title = "Grade Report";
+}
+
+<h2>Grade Report</h2>
+<h4>Results for every course you have been enrolled in</h4>
+<hr />
+
+@if(Model.Count().Equals(0))
+{
+    <div class="alert alert-warning">
+        <p>There are no grades to show.</p>
+    </div>
+}
+else
+{
+    foreach(var yearresult in Model.GroupBy(m=>m.Course.Year))
+    {                 
+        <h3>Year @yearresult.FirstOrDefault().Course.Year</h3>
+        <br />
+        foreach (var semesterresult in yearresult.GroupBy(m => m.Course.Semester))
+        {
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#semester-@semesterresult.FirstOrDefault().Course.Year-@semesterresult.FirstOrDefault().Course.Semester">
+                            Semester @semesterresult.FirstOrDefault().Course.Semester
+                        </a>
+                    </h4>
+                </div>
+                <div id="semester-@semesterresult.FirstOrDefault().Course.Year-@semesterresult.FirstOrDefault().Course.Semester" class="panel-collapse collapse">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Course Title</th>
+                                <th>Course Code</th>
+                                <th>Credit Hours</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var result in semesterresult)
+                            {
+                            <tr>
+                                <td>@result.Course.Title</td>
+                                <td>@result.Course.CourseNumber</td>
+                                <td>@result.Course.CreditHours</td>
+                                <td>
+                                    @if (@result.Grade != null)
+                                    {
+                                        @result.Grade.Name
+                                    }
+                                    else
+                                    {
+                                        <span> Not Specified</span>
+                                    }
+                                </td>
+
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        }
+    }
+
+}
+
+

@@ -1,0 +1,71 @@
+﻿@model  SIMS.Models.EditGradeViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Grade</h2>
+<h4>Update grade for a student</h4>
+<hr />
+
+<h3>[ @Model.StudentCourse.Course.CourseNumber ] @Model.StudentCourse.Course.Title</h3>
+<br />
+
+<div class="row">
+    <div class="col-sm-4">
+        @* Student Information *@
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="~/Content/avatar.png" alt="" class="img img-responsive" style="width: 150px; height: 150px" />
+            </div>
+            <div class="col-sm-6">
+                <dl class="">
+                    <dt>Name</dt>
+                    <dd>@Model.StudentCourse.Student.FirstName @Model.StudentCourse.Student.MiddleName @Model.StudentCourse.Student.LastName</dd>
+
+                    <dt>Program</dt>
+                    <dd>@Model.StudentCourse.Student.Program.Name</dd>
+
+                    <dt>Level</dt>
+                    <dd>@Model.StudentCourse.Student.Level.Name</dd>
+
+                    <dt>Id Number</dt>
+                    <dd>@Model.StudentCourse.Student.IdNumber</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        @using (Html.BeginForm("Edit", "Result", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="@Html.NameFor(m=>m.StudentCourseId)" value=@Model.StudentCourse.StudentCourseId />
+            <div class="form-group">
+                <p>
+                    <b>Previous Grade: </b>
+                    @if (@Model.StudentCourse.Grade != null)
+                    {
+                        @Model.StudentCourse.Grade.Name
+                    }else
+                    {
+                        <span>Not assigned</span>
+                    }
+
+                </p>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Grade)
+                <select class="form-control" name="@Html.NameFor(m=>m.Grade)">
+                    @foreach (var grade in Model.Grades)
+                    {
+                        <option value="@grade.GradeId">@grade.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit">Update Grade</button>
+            </div>
+        }
+
+
+    </div>
+</div>

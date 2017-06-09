@@ -1,0 +1,65 @@
+﻿@model SIMS.Models.IdentificationViewModel
+@{
+    ViewBag.Title = "Identification";
+}
+
+<h2>Identification</h2>
+<h4>Check whether the student exists.</h4>
+<hr />
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        @using(Html.BeginForm("Identification","Account",FormMethod.Post))
+        {
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Student Id Number</label>
+                    @Html.EditorFor(m => m.StudentIdNumber, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group col-sm-8">
+                    <br />
+                    <button class="btn btn-default">
+                        Check Id Number
+                    </button>
+                </div>
+            </div>
+            
+        }
+        @Html.Partial("_Alerts")
+
+        <hr />
+
+        @if(Model.Student != null)
+        {
+            <div class="row">
+                <div class="col-sm-4">
+                    @* Student Information *@
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="~/Content/avatar.png" class="img img-responsive" style="width: 150px; height: 150px" />
+                            <br />
+                            @Html.ActionLink("Change Password", "ChangePassword", "Manage", null, new { @class = "btn btn-default" })
+                        </div>
+                        <div class="col-sm-6">
+                            <dl class="">
+                                <dt>Name</dt>
+                                <dd>@Model.Student.FirstName @Model.Student.MiddleName @Model.Student.LastName</dd>
+
+                                <dt>Program</dt>
+                                <dd>@Model.Student.Program.Name</dd>
+
+                                <dt>Level</dt>
+                                <dd>@Model.Student.Level.Name</dd>
+
+                                <dt>Id Number</dt>
+                                <dd>@Model.Student.IdNumber</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

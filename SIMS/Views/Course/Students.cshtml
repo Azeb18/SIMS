@@ -1,0 +1,88 @@
+﻿@model SIMS.Models.StudentsListViewModel
+@{
+    ViewBag.Title = "Students";
+}
+
+<h2>Students</h2>
+<h4>Students in your class</h4>
+<hr />
+
+@Html.Partial("_Alerts")
+
+<div class="row">
+    <div class="col-sm-12">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label>Classes</label>
+                <select class="form-control" name="@Html.NameFor(m => m.CourseId)">
+                    @foreach(var course in Model.Courses)
+                    {
+                        <option value="@course.CourseId">[ @course.CourseNumber ] @course.Title</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(m => m.CourseId)
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success">List Students</button>
+            </div>
+        }
+    </div>
+</div>
+
+@if(Model.Students == null)
+{
+    <br />
+    <div class="alert alert-warning">
+        <p>Select a class from the above list to display enrolled students.</p>
+    </div>
+}
+else if(Model.Students.Count().Equals(0))
+{
+    <br />
+    <div class="alert alert-warning">
+        <p>There are no students enrolled in this class.</p>
+    </div>
+}
+else
+{
+    @* List of Students *@
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped table-bordered">
+                <caption>Students enrolled in @Model.Students.FirstOrDefault().Course.Title</caption>
+                <thead>
+                    <tr>
+                        <th>Student Id</th>
+                        <th>Student Name</th>
+                        <th>Grade</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Students)
+                    {                        
+                        <tr>
+                            <td>@student.Student.IdNumber</td>
+                            <td>@student.Student.FirstName @student.Student.MiddleName @student.Student.LastName</td>
+                            <td>
+                                @if (student.Grade!= null)
+                                {
+                                @student.Grade.Name                                    
+                                }
+                                else
+                                {
+                                    <span>Not Specified</span>
+                                }
+                            </td>
+                            <td>
+                                <a href="/Result/Edit/@student.StudentCourseId" class="">Edit grade</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div> 
+}

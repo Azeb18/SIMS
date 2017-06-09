@@ -1,0 +1,61 @@
+﻿@model IEnumerable<SIMS.Models.Clearance>
+
+@{
+    ViewBag.Title = "Requests";
+}
+
+<h2>Clearance Requests</h2>
+<h4>Record of all clearance requests</h4>
+<hr />
+@Html.Partial("_Alerts")
+
+@if(Model.Count().Equals(0))
+{
+    <div class="alert alert-warning">
+        <p>There are no clearance requests.</p>
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student.IdNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClearanceReasonId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remark)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RequestDate)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Student.IdNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClearanceReasonId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Remark)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequestDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.ClearanceId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

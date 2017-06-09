@@ -1,0 +1,42 @@
+﻿@model SIMS.Models.Student
+@{
+    ViewBag.Title = "Student Dashboard";
+}
+
+<h2>Student Dashboard</h2>
+<h4>Welcome to SIMS <b>@Model.FirstName</b></h4>
+<hr />
+
+@Html.Partial("_Alerts")
+
+<div class="row">
+    <div class="col-sm-4">
+        @* Student Information *@
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="~/Content/avatar.png" class="img img-responsive" style="width: 150px; height: 150px" />
+                <br />
+                @Html.ActionLink("Change Password", "ChangePassword", "Manage",null, new { @class = "btn btn-default"})
+            </div>
+            <div class="col-sm-6">
+                <dl class="">
+                    <dt>Name</dt>
+                    <dd>@Model.FirstName @Model.MiddleName @Model.LastName</dd>
+
+                    <dt>Program</dt>
+                    <dd>@Model.Program.Name</dd>
+
+                    <dt>Level</dt>
+                    <dd>@Model.Level.Name</dd>
+
+                    <dt>Id Number</dt>
+                    <dd>@Model.IdNumber</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6">
+    </div>
+</div>
+

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SIMS.Models.RegistrarClearance>
+@{
+    ViewBag.Title = "Clearances";
+}
+
+<h2>Registrar Clearance Requests</h2>
+<h4>Clearance requests sent to registrar</h4>
+<hr />
+@Html.Partial("_Alerts")
+
+<div class="row">
+    <div class="col-sm-12">
+        @if (Model.Count().Equals(0))
+        {
+            <div class="alert alert-warning">
+                <p>There are no registrar clearance requests.</p>
+            </div>
+        }
+        else
+        {
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Student Id</th>
+                        <th>Clearance Reason</th>
+                        <th>Remark</th>
+                        <th>Request Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var registrarClearance in Model)
+                    {
+                        <tr>
+                            <td>@registrarClearance.Clearance.Student.IdNumber</td>
+                            <td>@registrarClearance.Clearance.Reason.Reason</td>
+                            <td>@registrarClearance.Clearance.Remark</td>
+                            <td>@registrarClearance.Clearance.RequestDate</td>
+                            <td>@Html.ActionLink("Show Details", "Clearance", new { id = registrarClearance.RegistrarClearanceId })</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+    </div>
+</div>

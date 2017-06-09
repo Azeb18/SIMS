@@ -1,0 +1,103 @@
+﻿@model IEnumerable<SIMS.Models.Loan>
+
+@{
+    ViewBag.Title = "Loans";
+}
+
+
+
+<h2>Loans</h2>
+<h4>Record of all loans</h4>
+<hr />
+@Html.Partial("_Alerts")
+
+@if (Model.Count().Equals(0))
+{
+    <div class="alert alert-warning">
+        <p>There are no loans</p>
+    </div>
+}
+else
+{
+    <div class="row">
+        <form>
+            <div class="form-group col-sm-3">
+                <label>Student Id</label>
+                <input type="text" value="" class="form-control" placeholder="Any" />
+            </div>
+            <div class="form-group col-sm-3">
+                <label>Librarian Id</label>
+                <input type="text" value="" class="form-control" placeholder="Any" />
+            </div>
+            <div class="form-group col-sm-3">
+                <label>Loan Status</label>
+                <select class="form-control">
+                    <option>Any</option>
+                    <option>Returned</option>
+                    <option>Not Returned</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <table class="table table-striped table-hover">
+        <caption> Matching Items.</caption>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Student.IdNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Librarian.IdNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoanDate)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BookId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Student.IdNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Librarian.IdNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LoanDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Loan", new { id = item.LoanId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @* Pagination *@
+    <nav>
+        <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+
+
+@Html.ActionLink("Make a New Loan", "MakeLoan", null, new { @class = "btn btn-default" })

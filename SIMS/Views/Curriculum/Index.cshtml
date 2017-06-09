@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SIMS.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Curriculum</h2>
+<h4>Courses taught at HTTC</h4>
+<hr />
+
+<h3>Regular Degree Program</h3>
+@{
+    var regularDegree = Model.Where(m => m.Program.Name == "Regular").Where(m => m.Level.Name == "Bachelors Degree").GroupBy(m=>m.Year);
+}
+<br />
+@foreach(var year in regularDegree)
+{
+    <h4>Year @year.First().Year</h4>
+    foreach (var semester in year.GroupBy(m => m.Semester))
+    {
+        <table class="table table-striped table-bordered">
+            <caption>Semester @semester.First().Semester</caption>
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CourseNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>                    
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreditHours)
+                    </th>
+                    @*<th></th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in semester)
+                {
+                    <tr>
+                        <td>
+                            @item.CourseNumber
+                        </td>
+                        <td>
+                            @item.Title
+                        </td>
+                        <td>
+                            @item.CreditHours
+                        </td>                        
+                        @*<td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                            </td>*@
+                    </tr>
+                }
+            </tbody>
+
+
+
+        </table>
+    }
+}
+
+

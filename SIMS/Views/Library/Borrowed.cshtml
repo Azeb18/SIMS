@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SIMS.Models.Loan>
+@{
+    ViewBag.Title = "Borrowed books";
+}
+
+<h2>Borrowed Books</h2>
+<h4>Books you have borrwoed form library</h4>
+<hr />
+
+@if(Model.Count().Equals(0))
+{
+    <div class="alert alert-info">
+        <p>You have not borrowed any books from library.</p>
+    </div>
+}
+else
+{
+    <table class="table table-striped table-bordered">
+        <caption>Books you borrowed from library</caption>
+        <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Edition Year</th>
+                <th>Loan Date</th>
+                <th>Librarian</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var loan in Model)
+            {
+                <tr>
+                    <td>@loan.Book.Title</td>
+                    <td>@loan.Book.Author</td>
+                    <td>@loan.Book.EditionYear</td>
+                    <td>@loan.LoanDate</td>
+                    <td>@loan.Librarian.FirstName @loan.Librarian.MiddleName @loan.Librarian.LastName</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+}

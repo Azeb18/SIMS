@@ -1,0 +1,34 @@
+﻿@model SIMS.Models.UploadFileViewModel
+@{
+    ViewBag.Title = "Upload File";
+}
+
+<h2>Upload File</h2>
+<h4>Select a file and provide description for it</h4>
+<hr />
+
+@Html.Partial("_Alerts")
+
+<div class="row">
+    <div class="col-sm-6">
+        @using (Html.BeginForm("Upload", "File", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.ValidationSummary()
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.LabelFor(m => m.File)
+                @Html.TextBoxFor(m => m.File, new { type = "File" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Description)
+                @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit">Upload File</button>
+            </div>
+        }
+    </div>
+</div>
+
+<br />
+@Html.ActionLink("Uploaded Files", "UploadedFiles")

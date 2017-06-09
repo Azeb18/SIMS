@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SIMS.Models.AcademicDeanClearance>
+@{
+    ViewBag.Title = "Property";
+}
+
+<h2>Academic Dean Clearance Requests</h2>
+<h4>Clearance requests sent to the academic dean</h4>
+<hr />
+@Html.Partial("_Alerts")
+
+<div class="row">
+    <div class="col-sm-12">
+        @if (Model.Count().Equals(0))
+        {
+            <div class="alert alert-warning">
+                <p>There are no academic dean clearance requests.</p>
+            </div>
+        }
+        else
+        {
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Student Id</th>
+                        <th>Clearance Reason</th>
+                        <th>Remark</th>
+                        <th>Request Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var academicDeanClearace in Model)
+                    {
+                        <tr>
+                            <td>@academicDeanClearace.Clearance.Student.IdNumber</td>
+                            <td>@academicDeanClearace.Clearance.Reason.Reason</td>
+                            <td>@academicDeanClearace.Clearance.Remark</td>
+                            <td>@academicDeanClearace.Clearance.RequestDate</td>
+                            <td>@Html.ActionLink("Show Details", "Clearance", new { id = academicDeanClearace.AcademicDeanClearanceId })</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+    </div>
+</div>
