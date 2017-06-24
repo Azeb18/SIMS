@@ -1,156 +1,220 @@
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\SIMS.dll.config
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\SIMS.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\SIMS.pdb
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Antlr3.Runtime.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\EntityFramework.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\EntityFramework.SqlServer.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Newtonsoft.Json.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Owin.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Helpers.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Mvc.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Optimization.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Razor.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Deployment.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.WebPages.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Razor.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\WebGrease.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Helpers.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Mvc.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Optimization.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.Razor.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.WebPages.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Deployment.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Razor.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Antlr3.Runtime.pdb
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Newtonsoft.Json.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\EntityFramework.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\EntityFramework.SqlServer.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.csprojResolveAssemblyReference.cache
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.dll
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.pdb
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.createdstudentandregistraridentitymodels.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.csproj.GenerateResource.Cache
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedbookandloanmodels.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.madereturndateandfinenullableintheloanmodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedclearanceandclearancereason.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.smallmodificationtolibraryclearance.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedclearedpropertytoclearancemodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedbooknavigationpropertytoloanmodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedCoursemodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.changedyeartointincoursemodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedyearpropertytostudetmodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedStudentCoursesmodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedTeachermodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedgrademodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.madegradeidnullable.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedteachercoursemodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedclearancemodels.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addyeartostudentcoursemodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedyearpropertytoteachercourse.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedstudentfilemodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addeduploadedonpropertytostudentfilemodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedsectionpropertytostudentmodel.resources
-C:\Users\YiseHACK\Documents\Visual Studio 2013\Projects\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedsecurityandcafe.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\SIMS.dll.config
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\SIMS.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\SIMS.pdb
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Antlr3.Runtime.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\EntityFramework.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\EntityFramework.SqlServer.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Newtonsoft.Json.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Owin.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Helpers.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Mvc.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Optimization.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Razor.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.WebPages.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Razor.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\WebGrease.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Helpers.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Mvc.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Optimization.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.Razor.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.WebPages.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\System.Web.WebPages.Razor.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Antlr3.Runtime.pdb
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Newtonsoft.Json.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\EntityFramework.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\EntityFramework.SqlServer.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.csprojResolveAssemblyReference.cache
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.createdstudentandregistraridentitymodels.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedbookandloanmodels.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.madereturndateandfinenullableintheloanmodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedclearanceandclearancereason.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.smallmodificationtolibraryclearance.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedclearedpropertytoclearancemodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedbooknavigationpropertytoloanmodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedCoursemodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.changedyeartointincoursemodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedyearpropertytostudetmodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedStudentCoursesmodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedTeachermodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedgrademodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.madegradeidnullable.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedteachercoursemodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedclearancemodels.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addyeartostudentcoursemodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedyearpropertytoteachercourse.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedstudentfilemodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addeduploadedonpropertytostudentfilemodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedsectionpropertytostudentmodel.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.Migrations.addedsecurityandcafe.resources
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.csproj.GenerateResource.Cache
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.dll
-C:\Users\Rahel\Desktop\SIMS\SIMS\SIMS\SIMS\obj\Debug\SIMS.pdb
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\SIMS.dll.config
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\SIMS.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\SIMS.pdb
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Antlr3.Runtime.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\EntityFramework.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\EntityFramework.SqlServer.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Web.Infrastructure.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Newtonsoft.Json.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Owin.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Helpers.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Mvc.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Optimization.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Razor.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.WebPages.Deployment.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.WebPages.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.WebPages.Razor.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\WebGrease.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Helpers.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Mvc.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Optimization.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.Razor.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.WebPages.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.WebPages.Deployment.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\System.Web.WebPages.Razor.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Antlr3.Runtime.pdb
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Newtonsoft.Json.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\EntityFramework.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\EntityFramework.SqlServer.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\obj\Debug\SIMS.csprojResolveAssemblyReference.cache
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\obj\Debug\SIMS.dll
+c:\users\yisehack\documents\visual studio 2013\Projects\SIMS\SIMS\obj\Debug\SIMS.pdb
+H:\SIMS\SIMS\bin\SIMS.dll.config
+H:\SIMS\SIMS\bin\SIMS.dll
+H:\SIMS\SIMS\bin\SIMS.pdb
+H:\SIMS\SIMS\bin\Antlr3.Runtime.dll
+H:\SIMS\SIMS\bin\EntityFramework.dll
+H:\SIMS\SIMS\bin\EntityFramework.SqlServer.dll
+H:\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.dll
+H:\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.dll
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.dll
+H:\SIMS\SIMS\bin\Microsoft.Web.Infrastructure.dll
+H:\SIMS\SIMS\bin\Newtonsoft.Json.dll
+H:\SIMS\SIMS\bin\Owin.dll
+H:\SIMS\SIMS\bin\System.Web.Helpers.dll
+H:\SIMS\SIMS\bin\System.Web.Mvc.dll
+H:\SIMS\SIMS\bin\System.Web.Optimization.dll
+H:\SIMS\SIMS\bin\System.Web.Razor.dll
+H:\SIMS\SIMS\bin\System.Web.WebPages.Deployment.dll
+H:\SIMS\SIMS\bin\System.Web.WebPages.dll
+H:\SIMS\SIMS\bin\System.Web.WebPages.Razor.dll
+H:\SIMS\SIMS\bin\WebGrease.dll
+H:\SIMS\SIMS\bin\System.Web.Helpers.xml
+H:\SIMS\SIMS\bin\System.Web.Mvc.xml
+H:\SIMS\SIMS\bin\System.Web.Optimization.xml
+H:\SIMS\SIMS\bin\System.Web.Razor.xml
+H:\SIMS\SIMS\bin\System.Web.WebPages.xml
+H:\SIMS\SIMS\bin\System.Web.WebPages.Deployment.xml
+H:\SIMS\SIMS\bin\System.Web.WebPages.Razor.xml
+H:\SIMS\SIMS\bin\Antlr3.Runtime.pdb
+H:\SIMS\SIMS\bin\Newtonsoft.Json.xml
+H:\SIMS\SIMS\bin\EntityFramework.xml
+H:\SIMS\SIMS\bin\EntityFramework.SqlServer.xml
+H:\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.xml
+H:\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.xml
+H:\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+H:\SIMS\SIMS\obj\Debug\SIMS.csprojResolveAssemblyReference.cache
+H:\SIMS\SIMS\obj\Debug\SIMS.dll
+H:\SIMS\SIMS\obj\Debug\SIMS.pdb
+E:\all\PROJECT\SIMS\SIMS\bin\SIMS.dll.config
+E:\all\PROJECT\SIMS\SIMS\bin\SIMS.dll
+E:\all\PROJECT\SIMS\SIMS\bin\SIMS.pdb
+E:\all\PROJECT\SIMS\SIMS\bin\Antlr3.Runtime.dll
+E:\all\PROJECT\SIMS\SIMS\bin\EntityFramework.dll
+E:\all\PROJECT\SIMS\SIMS\bin\EntityFramework.SqlServer.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Web.Infrastructure.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Newtonsoft.Json.dll
+E:\all\PROJECT\SIMS\SIMS\bin\Owin.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Helpers.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Mvc.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Optimization.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Razor.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.WebPages.Deployment.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.WebPages.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.WebPages.Razor.dll
+E:\all\PROJECT\SIMS\SIMS\bin\WebGrease.dll
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Helpers.xml
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Mvc.xml
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Optimization.xml
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.Razor.xml
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.WebPages.xml
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.WebPages.Deployment.xml
+E:\all\PROJECT\SIMS\SIMS\bin\System.Web.WebPages.Razor.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Antlr3.Runtime.pdb
+E:\all\PROJECT\SIMS\SIMS\bin\Newtonsoft.Json.xml
+E:\all\PROJECT\SIMS\SIMS\bin\EntityFramework.xml
+E:\all\PROJECT\SIMS\SIMS\bin\EntityFramework.SqlServer.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\all\PROJECT\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\all\PROJECT\SIMS\SIMS\obj\Debug\SIMS.csprojResolveAssemblyReference.cache
+E:\all\PROJECT\SIMS\SIMS\obj\Debug\SIMS.dll
+E:\all\PROJECT\SIMS\SIMS\obj\Debug\SIMS.pdb
+E:\5th\SIMS\SIMS\bin\SIMS.dll.config
+E:\5th\SIMS\SIMS\bin\SIMS.dll
+E:\5th\SIMS\SIMS\bin\SIMS.pdb
+E:\5th\SIMS\SIMS\bin\Antlr3.Runtime.dll
+E:\5th\SIMS\SIMS\bin\EntityFramework.dll
+E:\5th\SIMS\SIMS\bin\EntityFramework.SqlServer.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\5th\SIMS\SIMS\bin\Microsoft.Web.Infrastructure.dll
+E:\5th\SIMS\SIMS\bin\Newtonsoft.Json.dll
+E:\5th\SIMS\SIMS\bin\Owin.dll
+E:\5th\SIMS\SIMS\bin\System.Web.Helpers.dll
+E:\5th\SIMS\SIMS\bin\System.Web.Mvc.dll
+E:\5th\SIMS\SIMS\bin\System.Web.Optimization.dll
+E:\5th\SIMS\SIMS\bin\System.Web.Razor.dll
+E:\5th\SIMS\SIMS\bin\System.Web.WebPages.Deployment.dll
+E:\5th\SIMS\SIMS\bin\System.Web.WebPages.dll
+E:\5th\SIMS\SIMS\bin\System.Web.WebPages.Razor.dll
+E:\5th\SIMS\SIMS\bin\WebGrease.dll
+E:\5th\SIMS\SIMS\bin\System.Web.Helpers.xml
+E:\5th\SIMS\SIMS\bin\System.Web.Mvc.xml
+E:\5th\SIMS\SIMS\bin\System.Web.Optimization.xml
+E:\5th\SIMS\SIMS\bin\System.Web.Razor.xml
+E:\5th\SIMS\SIMS\bin\System.Web.WebPages.xml
+E:\5th\SIMS\SIMS\bin\System.Web.WebPages.Deployment.xml
+E:\5th\SIMS\SIMS\bin\System.Web.WebPages.Razor.xml
+E:\5th\SIMS\SIMS\bin\Antlr3.Runtime.pdb
+E:\5th\SIMS\SIMS\bin\Newtonsoft.Json.xml
+E:\5th\SIMS\SIMS\bin\EntityFramework.xml
+E:\5th\SIMS\SIMS\bin\EntityFramework.SqlServer.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Google.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\5th\SIMS\SIMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\5th\SIMS\SIMS\obj\Debug\SIMS.csprojResolveAssemblyReference.cache
+E:\5th\SIMS\SIMS\obj\Debug\SIMS.dll
+E:\5th\SIMS\SIMS\obj\Debug\SIMS.pdb

@@ -3,58 +3,81 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<br /><br />
-<div class="row" style="">
-    <div class="col-sm-6">
-        <h1 style="font-size: 60px">Holy Trinity Thelogical College</h1><h3>Student Information Management System</h3> 
-       
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <img src="~/Images/httc.png" alt="Alternate Text" style="width:150px" />
+            <h1 class="h1">Holy Trinity Theological College</h1>
+            <h3 class="">ቅድስት ሥላሴ መንፈሳዊ ኮሌጅ</h3>
+        </div>
     </div>
+    <hr />
+    @if(User.Identity.IsAuthenticated)
+    {
+        <br />
+        <h1 class="text-center" style="font-family: Roboto slab thin">Welcome to SIMS!</h1>
+    }
+    else
+    {
+     <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 ">
 
-    <div class="col-sm-4 col-sm-offset-1">
-        <section id="loginForm">
-            <h3>Login</h3>
-            <hr />
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.UserName)
-                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sign in</h3>
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password)
-                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                <div class="panel-body">
+                    <p>If it is your first time logging in, please change your password immediately afterwards.</p>
+                    <section id="loginForm">
+                        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form" }))
+                        {
+                        @Html.AntiForgeryToken()
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.UserName, new { @class = "" })
+                            <div class="">
+                                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password, new { @class = "" })
+                            <div class="">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="">
+                                <div class="checkbox">
+                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                    @Html.LabelFor(m => m.RememberMe)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="">
+                                <button class="btn btn-default" type="Reset">Reset</button>
+                                <button class="btn btn-success btn-lg">Sign in</button>
+                            </div>
+                        </div>
+                        @*
+                            <p>
+                                @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                            </p>*@
+                        }
+                    </section>
                 </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label>@Html.CheckBoxFor(m => m.RememberMe) Remember Me</label>
+            </div>
 
-
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Log in" class="btn btn-success" />
-                </div>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
-        </section>
-    </div>
+        </div>
+    </div>        
+    }
 </div>
-<br />
-<div class="row">
-    <div class="col-sm-12">
-        <ul class="list-unstyled list-inline">
-            <li><a href="/Curriculum">Curriculum</a></li>
-        </ul>
-    </div>
-</div>
 
-<script>
-    $('body').css('background','#234')
-</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,5 +1,8 @@
-﻿using Microsoft.Owin;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin;
 using Owin;
+using SIMS.Models;
 
 [assembly: OwinStartupAttribute(typeof(SIMS.Startup))]
 namespace SIMS
@@ -8,7 +11,11 @@ namespace SIMS
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+            ConfigureAuth(app);            
         }
+
+
     }
+
+
 }
